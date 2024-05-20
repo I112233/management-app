@@ -1,25 +1,17 @@
 import React from 'react'
+import Input from '../Input/Input'
 
 export default function NewProject() {
     return (
-        <div>
-            <menu>
-                <li><button>Save</button></li>
-                <li><button>Cancel</button></li>
+        <div className='w-[35rem] mt-16'>
+            <menu className='flex item-center justify-end gap-4 my-4'>
+                <li><button className='text-stone-800 hover:text-stone-950'>Save</button></li>
+                <li><button className='bg-stone-800 text-stone-50 hover:bg-stone-950 px-6 py-2 rounded-md'>Cancel</button></li>
             </menu>
             <div>
-                <p>
-                    <label>Title</label>
-                    <input type="text" />
-                </p>
-                <p>
-                    <label>Description</label>
-                    <textarea />
-                </p>
-                <p>
-                    <label>Title</label>
-                    <input type="text" />
-                </p>
+                <Input label="Title" />
+                <Input label="Description" textarea />
+                <Input label="Due Date" />
             </div>
         </div>
     )
