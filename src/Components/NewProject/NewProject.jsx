@@ -3,7 +3,7 @@ import Input from "../Input/Input";
 import { useRef } from "react";
 import Modal from "../Modal/Modal";
 
-export default function NewProject({ onAdd }) {
+export default function NewProject({ onAdd, onCancel }) {
     const title = useRef();
     const description = useRef();
     const dueDate = useRef();
@@ -34,8 +34,8 @@ export default function NewProject({ onAdd }) {
         <>
             <Modal ref={modal} btnCaption="Close">
                 <h2>Invalid Input</h2>
-                <p>Oops ... looks like you forgot to enter a value.</p>
-                <p>Please make sure you provide a valid value for the input field.</p>
+                <p className="text-stone-400 md-4" >Oops ... looks like you forgot to enter a value.</p>
+                <p className="text-stone-400 md-4" >Please make sure you provide a valid value for the input field.</p>
             </Modal>
             <div className="w-[35rem] mt-16">
                 <menu className="flex item-center justify-end gap-4 my-4">
@@ -48,7 +48,7 @@ export default function NewProject({ onAdd }) {
                         </button>
                     </li>
                     <li>
-                        <button className="bg-stone-800 text-stone-50 hover:bg-stone-950 px-6 py-2 rounded-md">
+                        <button onClick={onCancel} className="bg-stone-800 text-stone-50 hover:bg-stone-950 px-6 py-2 rounded-md">
                             Cancel
                         </button>
                     </li>
