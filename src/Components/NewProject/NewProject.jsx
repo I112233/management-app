@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "../Input/Input";
 import { useRef } from "react";
+import Input from "../Input/Input";
 import Modal from "../Modal/Modal";
 
 export default function NewProject({ onAdd, onCancel }) {
